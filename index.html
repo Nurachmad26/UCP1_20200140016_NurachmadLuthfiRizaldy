@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratikum UCP 1  </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Lainnya</a>
+            <div class="dropdown-content">
+                <a href="#">Produk</a>
+                <a href="#">Kontak</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- Carousel -->
+<div class="carousel">
+    <!-- Isi Carousel -->
+</div>
+
+<!-- Greeting dan Waktu -->
+<div class="greeting">
+    <p>Salam miawwwww!</p>
+    <p id="waktu"></p>
+</div>
+
+<!-- Tombol yang memunculkan alert -->
+<button onclick="alert('Kucing merupakan hewan karnivora predator yang berukuran kecil dengan nama latin Felis silvestris catus. Sejak 6.000 tahun SM, kucing telah berbaur dengan kehidupan manusia')">Klik saya!</button>
+
+<!-- Gambar -->
+<div class="gambar">
+    <img src="gambar1.jpeg" alt="Gambar 1">
+    <img src="gambar2.jpeg" alt="Gambar 2">
+    <img src="gambar3.jpeg" alt="Gambar 3">
+</div>
+
+<!-- Video -->
+<video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<!-- Audio -->
+<audio controls>
+    <source src="audio1.mp3" type="audio/mpeg">
+</audio>
+<audio controls>
+    <source src="audio2.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Footer -->
+<footer>
+    <p>Hak Cipta &copy; 2024.</p>
+</footer>
+
+<!-- Script untuk Greeting dan Waktu real-time -->
+<script>
+    function updateClock() {
+        var now = new Date();
+        var jam = now.getHours();
+        var menit = now.getMinutes();
+        var detik = now.getSeconds();
+        var waktu = jam + ":" + menit + ":" + detik;
+        document.getElementById('waktu').innerHTML = waktu;
+        setTimeout(updateClock, 1000);
+    }
+    updateClock();
+</script>
+
+</body>
+</html>
